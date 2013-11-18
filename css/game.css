@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;  
+    box-sizing: border-box;  
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: 'Lato', 'Helvetica', 'Arial', sans-serif;
+    color: #FFF;
+}
+
+.wrapper-game {
+	width: 1440px;
+	height: 900px;
+	background: url('../images/table.png') no-repeat center center;
+    position: relative;
+}
+
+.game {
+	margin: 0 auto;
+}
+
+.gamer {
+    position: absolute;
+    pointer: events;
+}
+
+.gamer h2 {
+    font-size: 14px;
+    display: block;
+    font-weight: normal;
+}
+
+.gamer h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.top {
+    top: 50px;
+}
+
+.bottom {
+    bottom: 50px;
+}
+
+.left {
+    left: 250px;
+    text-align: left;
+}
+
+.right {
+    right: 250px;
+    text-align: right;
+}
+
+#layer {
+    position: fixed;
+    z-index: 21;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    opacity: 0;
+    visibility: hidden;
+
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+
+#layer.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#layer.show .wooden-box-holder {
+    top: 50%;
+    opacity: 1;
+}
+
+#layer .wooden-box-holder {
+    width: 487px;
+    height: 537px;
+    top: 0%;
+    opacity: 0;
+    position: absolute;
+    margin: -268px 0 0 0;
+    background: #1f1f1f url('wooden-box.png') no-repeat top center;
+    padding: 65px;
+
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+
+#layer .wooden-box  h1 {
+    text-align: center;
+    font-family: 'Chalkduster';
+    font-size: 36px;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+}
+
+#layer #play-game {
+    left: -50%;
+    margin-left: -243px;
+}
+
+#layer #play-game.active {
+    left: 50%;
+} 
+
+#layer .wooden-box-holder p {
+    text-align: center;
+    line-height: 20px;
+    margin: 0 0 30px 0;
+}
+
+#layer .wooden-box-holder p strong {
+    display: block;
+    font-weight: bold;
+}
+
+#layer .wooden-box-holder p .red {
+    color: #FF0000;
+}
+
+#layer .wooden-box-holder p .light {
+    color: #747474;
+}
+
+#layer .wooden-box-holder button {
+    width: 250px;
+    height: 70px;
+    background: #e8da00;
+    box-shadow: inset 0px -4px 0 rgba(0,0,0,0.45);
+    border: 0;
+    display: block;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #3d3a00;
+    font-weight: 900;
+    margin: 110px auto 15px auto;
+    cursor: pointer;
+    position: relative;
+
+    -webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+
+#layer .wooden-box-holder button:hover {
+    color: #FFF;
+    background: #3e3b00;
+}
+
+#layer .wooden-box-holder button:active {
+    top: 2px;
+    box-shadow: inset 0px -2px 0 rgba(0,0,0,0.45);
+    color: #333;
+    background: #FFF;
+}
+
+#layer .wooden-box-holder .simple-link {
+    display: block;
+    text-align: center;
+    color: #a7a7a7;
+}
+
+#layer .wooden-box-holder .simple-link:hover {
+    color: #FFF;
+    text-decoration: none;
+}
+
+#layer .table-container {
+    height: 440px;
+    overflow: auto;
+}
+
+#layer #leaderboard {
+    left: auto;
+    right: -50%;
+}
+
+#layer #leaderboard.active {
+    right: 50%;
+    margin-left: 0;
+    margin-right: -243px;
+}
+
+#layer #leaderboard table {
+    width: 357px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+#layer #leaderboard table th {
+    font-weight: normal;
+    color: #a7a7a7;
+}
+
+#layer #leaderboard table th,
+#layer #leaderboard table td {
+    padding: 10px;
+}
